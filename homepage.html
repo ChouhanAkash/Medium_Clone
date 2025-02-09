@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="icon" href="medium logo.png">
+
+    <script
+      src="https://kit.fontawesome.com/270082d4da.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <body>
+        <div class="container">
+          <div class="nav">
+            <!-- Left side: Logo and search -->
+            <div class="left">
+            <h1>Medium</h1>
+              <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search" placeholder=" Search" oninput="searchFunction()" />
+              </div>
+            </div>
+            <div class="right">
+              <div class="nav_bar">
+                <a href="publish.html"> <button id="write_btn"><i class="fa-regular fa-pen-to-square"></i> Write</button></a>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile">
+                  <img id="showProfilePopup"
+                    src="./download (1).jpg"
+                    alt="Profile Picture"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="article_box">
+            <div class="blog">
+              <!-- tabs for adding the cotent -->
+              <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'ForYou')">For You</button>
+              <button class="tablinks" onclick="openCity(event, 'Following')">Following</button>
+              <button class="tablinks" onclick="openCity(event, 'Technology')">Technology</button>
+              <button class="tablinks" onclick="openCity(event, 'Data Science')">Data Science</button>
+              <button class="tablinks" onclick="openCity(event, 'Programming')">Programming</button>
+            </div>
+            <!-- data tab div -->
+            <div id="ForYou" class="tabcontent"></div> 
+            <div id="Following" class="tabcontent"></div> 
+            <div id="Technology" class="tabcontent"></div>
+            <div id="Data Science" class="tabcontent"></div>
+            <div id="Programming" class="tabcontent"></div>
+            </div>
+            <!-- end of tabContent -->
+
+            <!-- second div for staff content -->
+            <div class="staff_pics">
+              <h3>Saff Picks</h3>
+            </div>
+          </div>
+        </div>
+        <div id="userPopupOverlay" class="popup-overlay">
+          <div class="popup-box">
+              <span class="popup-close" id="hideProfilePopup">&times;</span>
+              <div class="popup-details">
+                  <p><i class="fas fa-user-circle profile-icon" id="profileIcon"></i> Profile </p>
+                  <p><i class="fas fa-book icon" id="libraryIcon"></i> Library</p>
+                  <p> <i class="fas fa-bookmark icon" id="bookmarkIcon"></i> Bookmark</p>
+                  <p><i class="fas fa-book-open story-icon" id="storyIcon"></i> Story</p>
+                  <p><i class="fas fa-chart-bar stats-icon" id="statsIcon"></i> Stats</p>
+                  <p class="line"></p>
+                  <p id=""><i class="fas fa-cog settings-icon"> </i>  Setting</p>
+                  <p>Refine Recommendation</p>
+                  <p>Manage Publication</p>
+                  <p>Help</p>
+                  <p class="line"></p>
+                  <p class="popup-username" id="user"></p>
+                  <p class="popup-bio" id="email"></p>
+                  <p id="logout">Sign Out</p>
+              </div>
+          </div>
+      </div>
+  
+  </body>
+</html>
+
+<script src="script.js"> </script>
+<script type="module" src="homepage.js"></script>

@@ -1,0 +1,510 @@
+ /* Reset & Global Styling */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color:  #FFFDF6;
+    font-family: "Poppins", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20px;
+    background: #FFFDF6;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Medium Logo */
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Button Style */
+.btn {
+    padding: 8px 16px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-mob{
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+   .logo{
+    font-size: 25px;
+   }
+   .menu-icon {
+        display: block;
+        font-size: 25px;
+    }
+}
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 120px ;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    flex-grow: 1;
+}
+
+.hero-text {
+    max-width:800px;
+    margin:100px;
+}
+
+.hero-text h1 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 60px;
+}
+
+.hero .btn {
+    margin-top: 60px;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+.hero-img {
+    max-width: 440px;
+    margin-top: 80px;
+}
+
+.hero-img img {
+    width:100%;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #E2E2E2;
+    font-size: 0.9rem;
+    color: #444;
+    width: 100%;
+    background: #FFFDF6;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.mobilefoot{
+    display:none;
+}
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-img {
+        max-width: 80%;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .hero {
+        padding: 80px 5%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        letter-spacing: -0.05em;
+        line-height: 72px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+    .mobilefoot{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height:90vh;
+    }
+    .hero-text {
+        margin-top: 30%;
+        margin-left:2%;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    .hero-text p {
+        margin-top:20px;
+        font-size: 1.3rem;
+    }
+
+    .btn-mob {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        background-color: rgb(30, 220, 30);
+        color:white;
+        border-radius: 30px;
+        border: none;
+    }
+
+    .hero-img {
+        display:none
+    }
+    .footer{
+        display:none;
+    }
+    .mobilefoot{
+        display: flex;
+        padding:25px 20px;
+        background-color: #333;
+        gap:20px;
+    }
+    .mobilefoot a{
+        text-decoration: none;
+        color:white;
+    }
+    .mobilefoot a:hover{
+        color:blue;
+        text-decoration: underline;
+    }
+}
+/* popup form css*/
+
+
+/* Reset Styles */
+
+/* Background Overlay */
+.popup-container {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #FFFDF6;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Popup Content */
+.popup-content{
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    padding: 25px;
+    border-radius: 15px;
+    width: 600px;
+    position: relative;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+/* Form Container */
+.container {
+    width: 100%;
+    padding: 2rem;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Input Group */
+.input-group {
+    padding: 10px 2px;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 1.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f0;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    border: 2px solid #5a5af0;
+    background: white;
+}
+
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 40px;
+    font-size: 0.85rem;
+    color: #5a5af0;
+}
+
+/* Buttons */
+.butt {
+    margin-top: 20px;
+    margin-left: 35%;
+    font-size: 1.2rem;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: none;
+    width: 30%;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+/* Alternative Sign-in Options */
+.links p span{
+    color:#4333b0;
+}
+.or {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.icons i {
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin:0 10px;
+    transition: 0.3s ease;
+    padding:0.5rem 0.6rem;
+    width: 50px;
+    text-align: center;
+}
+
+.icons i:nth-child(1) {
+    background: #db4437; /* Google Color */
+}
+
+.icons i:nth-child(2) {
+    background: #1877f2; /* Facebook Color */
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.links button {
+    color: #5a5af0;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.links button:hover {
+    text-decoration: underline;
+    color: #4333b0;
+}
+
+/* Message Div */
+.messageDiv {
+    background: #4333b0;
+    color: white;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 85%;
+    }
+
+    .icons i {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

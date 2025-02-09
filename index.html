@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Navbar Clone</title>
+    <link rel="icon" href="medium logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">Medium</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="story.html">Our story</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="#">Write</a></li>
+            <li><a href="#" id="openPopup">Sign in</a></li>
+            <li><button class="btn" id="GetopenPopup">Get started</button></li>
+        </ul>
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon">
+            <button class="btn">Get started</button>
+        </div>
+    </nav>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Human<br> stories & ideas</h1>
+        <p>A place to read, write, and deepen your understanding.</p>
+        <button class="btn-mob" id="startread">Start reading</button>
+    </div>
+    <div class="hero-img">
+        <img src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" alt="Medium Illustration">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <a href="#">Help</a>
+    <a href="#">Status</a>
+    <a href="#">About</a>
+    <a href="#">Careers</a>
+    <a href="#">Press</a>
+    <a href="#">Blog</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Text to speech</a>
+    <a href="#">Teams</a>
+</footer>
+    <footer class="mobilefoot">
+        <a href="#">Help</a>
+    <a href="#">Status</a>
+    <a href="#">About</a>
+    <a href="#">Careers</a>
+    </footer>
+<!--Popup form-->
+<div id="popupContainer" class="popup-container">
+    <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <div class="container" id="signup" style="display:none;">
+            <h1 class="form-title">Sign Up</h1>
+            <form method="post" action="">
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fName" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="lName" placeholder="Last Name" required>
+                    
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="rEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="rPassword" placeholder="Password" required>
+                </div>
+                <button class="butt" id="submitSignUp">Sign Up</button>
+            </form>
+            <p class="or">----------or--------</p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook" id="facebookBtn"></i>
+            </div>
+            <div class="links">
+                <p>Already Have an Account?<span id="signInButton">SignIn</span></p>
+                
+            </div>
+        </div>
+
+        <div class="container" id="signIn">
+            <h1 class="form-title">Sign In</h1>
+            <form method="post" action="">
+                <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter Your Gmail" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button class="butt" id="submitSignIn">Sign In</button>
+            </form>
+            <p class="or">----------or--------</p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Don't have an account yet? <span id="signUpButton">Signup</span></p>
+                <p class="recover"><a href="#">Recover Password</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script type="module" src="firebaseconfig.js"></script>
+</body>
+</html>

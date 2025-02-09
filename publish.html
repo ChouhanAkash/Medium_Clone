@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/18a557e852.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="publish.css" />
+    <link rel="icon" href="medium logo.png">
+    <title>New Story - Medium</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="editor-container">
+      <div
+        id="logo-and-publish"
+        style="display: flex; justify-content: space-between; width: 57%"
+      >
+        <img
+          src="Medium-logo.png"
+          alt="medium-logo"
+          style="height: 1.6rem; width: auto"
+        />
+        <button id="publish-btn" aria-label="Publish Button">Publish</button>
+      </div>
+      <div class="editor" id="editor">
+        <div class="head">
+        <h1>
+          <textarea
+            id="heading"
+            aria-label="Title"
+            placeholder="Title..."
+          ></textarea>
+        </h1>
+      </div class="head">
+      <div>
+        <p>
+          <textarea
+            id="content"
+            aria-label="Content"
+            placeholder="Tell your story..."
+          ></textarea>
+        </p>
+      </div>
+      </div>
+      <div id="toolbar-and-text">
+        <div>
+        </div>
+        <div class="toolbar" style="justify-self: center">
+          <button id="bold" title="Bold"><b>B</b></button>
+          <button id="italic" title="Italic"><i>I</i></button>
+          <button id="underline" title="Underline"><u>U</u></button>
+          <button id="link-L" title="Link">🔗</button>
+          <button id="heading-H" title="Heading">H</button>
+          <button id="reset" title="Reset" type="reset">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="displayContainer"></div>
+    <script src="publish.js"></script>
+  </body>
+</html>

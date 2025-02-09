@@ -1,0 +1,415 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* main container */
+.container {
+  width: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  background-color: white;
+  z-index: 1000;
+}
+/* logo and search bar */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.logo h1 {
+  font-size: 28px;
+  color: #1e1e1e;
+}
+
+.search-container {
+  position: relative;
+  width: 20em;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 15px 10px 10px 35px;
+  border: none;
+  border-radius: 1.5em;
+  background-color: #f9f9f9;
+}
+
+.search-container i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #545252;
+}
+/* button of write */
+.nav_bar button,.like_comment>button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  background-color: transparent; /* No background color */
+  color: #333; /* Button text color */
+}
+/* end of sreach container and nav bar */
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.nav_bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav_bar p {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav_bar p i {
+  margin-right: 8px;
+}
+.nav_bar>a{
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.article_box {
+  margin: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1em;
+}
+
+/* Tab styles */
+.tab {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.tab button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+  background-color: transparent; /* No background color */
+  color: #333; /* Button text color */
+  border-bottom: 2px solid transparent;
+  margin-right: 5px;
+}
+.tab button.active {
+  border-bottom: 2px solid #ccc; /* Indication of active tab */
+  color: #8d8282; /* Change text color when active */
+}
+
+.tabcontent {
+  display: none;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+/* Article styles */
+.article {
+  padding:0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3em;
+}
+p,h2{
+  padding:0;
+  margin: 0;
+}
+.article img {
+  width: 10em;
+  height: 8em;
+  margin-top: 5em;
+}
+/* anchor tag of paraagraph */
+.desciption {
+  text-decoration: none;
+  color: black;
+}
+.like_comment{
+  display: flex;
+  gap:1em
+}
+/* user profile */
+p .user_profile{
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  margin-top: 1em;
+  padding: 0;
+}
+/* auther information */
+.article_content {
+  position: relative;
+ /* This will allow absolute positioning of .hide inside it */
+}
+.myDIV{
+  cursor: pointer;
+}
+/* Hover effect on .myDIV */
+.myDIV:hover + .hide {
+  display: block;
+ 
+}
+
+/* Styling the profile image */
+ .hide .user_profile,.user_profile {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+}
+.hide .btn,#writingOnMediumSection>button{
+  background-color:black;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 1em;
+  margin-left: 4em;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.user-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.follow-btn,.write_div>button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 2em;
+  width: 5em;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+/* new div */
+#writingOnMediumSection{
+  width:60%;
+  margin: 2em;
+  border: 1px solid black;
+  padding: 1em;
+  text-align:left;
+ 
+}
+.write_div>button{
+  width: 10em;
+  margin-top: 5px;
+  padding: 5px 6px;
+}
+.write_div{
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+
+.hide {
+  display: none;
+  position: absolute;
+  top: 10; 
+  left: 0;  
+  width: 250px;   
+  padding: 20px;
+  background-color: #fff;   
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+  transition: opacity 0.3s ease-in-out;   
+  z-index: 10;  
+ 
+}
+
+
+
+/* Styling for the text content inside the card */
+.hide h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hide p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+.hide input[type="button"] {
+  display: inline-block;
+  padding: 5px 5px;
+  margin-top: 12px;
+}
+
+/* css */
+#img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#img img{
+  width: 3em;
+  height: 3em;
+}
+@media screen and (max-width: 768px){
+  .staff_pics{
+    display: none;
+  }
+  .right{
+    display: none;
+  }
+  .article_box {
+    margin: 0.5em 1em;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 1em;
+  }
+}
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 55px;
+  right: 10px; 
+  width: 250px; 
+  height: 80vh;
+  background:white;
+  z-index: 1100;
+ 
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  border-radius: 10px;
+}
+
+/* Show Popup */
+.popup-overlay.show {
+  transform: translateX(0);
+}
+
+/* Popup Content */
+.popup-box {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Profile Details */
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 1em;
+}
+
+.popup-details p i{
+margin-top:10px;
+}
+.popup-details .line{
+  width:100%;
+  height:1px;
+  background-color: lightgray;
+  margin-top: 10px;
+}
+.popup-username {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.popup-bio {
+  font-size: .8rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Follow Button */
+.popup-follow-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.popup-follow-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .popup-overlay {
+      width: 280px; /* Smaller width for mobile */
+  }
+}
+
