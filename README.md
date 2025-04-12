@@ -71,5 +71,5 @@ We, the Web Architects, have successfully built a clone of the **Medium.com** we
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Prajakta811/WEB_017-Code-Surgeons.git
+   https://github.com/ChouhanAkash/Medium_Clone.git
    ```
